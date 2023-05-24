@@ -1,0 +1,141 @@
+/* responsive css start */
+/* container css start */
+@media (min-width: 1140px) {
+ 
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1350px) {
+
+}
+@media (min-width: 1600px) {
+
+}
+/* container css end */
+/* general use css start */
+@media (max-width: 1799px) {
+    .auth-section .auth-right-col{
+        padding: 50px 90px 50px 100px;
+    }
+}
+@media (max-width: 1599px) {
+    .auth-section .auth-right-col{
+        padding: 50px 60px 50px 70px;
+    }
+    .heading-label-p{
+        font-size: 16px;
+    }
+    .heading-title{
+        font-size: 33px;
+    }
+}
+@media (max-width: 1439px) {
+
+}
+@media (max-width: 1365px) {
+
+}
+@media (max-width: 1279px) {
+    .auth-section .auth-right-col{
+        padding: 50px 40px 50px 50px;
+    }
+}
+@media (max-width: 1199px) {
+    :root{
+        --auth-left-col-width: 55%;
+    }
+}
+@media (max-width: 991px) {
+    :root{
+        --auth-left-col-width: 50%;
+    }
+    .auth-section .auth-right-col {
+        padding: 50px 20px 50px 30px;
+    }
+    .primary-btn{
+        border-radius: 6px;
+        min-width: 150px;
+        min-height: 40px;
+    }
+    .custom-input, .custom-textarea{
+        min-height: 45px;
+    }
+    .custom-input, .custom-textarea{
+        border-radius: 10px;
+    }
+}
+@media (max-width: 767px) {
+    :root{
+        --auth-left-col-width: 30%;
+    }
+    .auth-section .auth-left-col{
+        padding: 20px;
+    }
+    .heading-title{
+        font-size: 26px;
+    }
+    .custom-input, .custom-textarea{
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+    .form-control::placeholder {
+        font-size: 14px;
+    }
+    .icon-input .form-control {
+        padding-left: 45px;
+    }
+    .icon-input-pass .form-control {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    .icon-input-span{
+        left: 15px;
+    }
+    .icon-input-span.eye-ico {
+        left: unset;
+        right: 15px;
+    }
+    .auth-new-acc-txt,.auth-bottom-txt {
+        font-size: 11px;
+    }
+    form{
+        margin-top: 20px;
+        max-height: max-content;
+        overflow-y: unset;
+        padding-right: 0;
+    }
+    .auth-main-row{
+        height: auto;
+        overflow-y: unset;
+    }
+}
+@media (max-width: 575px) {
+    .auth-section .auth-left-col{
+        padding: 10px;
+    }
+    .heading-title {
+        font-size: 24px;
+    }
+    .auth-section .auth-right-col {
+        padding: 50px 20px;
+    }
+    .heading-label-p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 399px) {
+    .heading-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 349px) {
+    .auth-section .auth-left-col{
+        display: none;
+    }
+    .auth-section .auth-right-col{
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+/* general use css end */
