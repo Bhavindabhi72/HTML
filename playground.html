@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fintology</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icons/favicon-32x32-1.png" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/icons/android-chrome-512x512-1.png" />
+
+  <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <style>
+    .stats-counter-card {
+      border-radius: 15px;
+      padding: 26px;
+    }
+
+    .stats-counter-sky-blue {
+      background: linear-gradient(90deg, #00D0D0 0%, #17B3B3 100%);
+      box-shadow: 0px 2px 4px rgba(24, 182, 182, 0.25);
+    }
+
+    .stats-counter-light-orange {
+      background: linear-gradient(90deg, #FF7443 0%, #F8561D 100%);
+      box-shadow: 0px 2px 4px rgba(255, 117, 73, 0.2);
+    }
+
+    .stats-counter-simple-pink {
+      background: linear-gradient(90deg, #F15174 0%, #EF3B62 100%);
+      box-shadow: 0px 2px 4px rgba(255, 62, 73, 0.2);
+    }
+
+    .stats-counter-low-lavender {
+      background: linear-gradient(100.01deg, #8676FE -1.51%, #6955FC 93.85%);
+      box-shadow: 0px 5px 10px rgba(97, 75, 255, 0.2);
+    }
+
+    .stats-counter-number {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+    }
+
+    .stats-counter-title {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: #FFFFFF;
+    }
+
+    .icon-class {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-class svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+
+
+
+    .wd-list-card {
+      background: #FFFFFF;
+      border-radius: 15px;
+      padding: 22px;
+    }
+
+    .wd-avatar-window {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50rem;
+    }
+
+    .wd-list-card-head {
+      padding: 12px;
+    }
+
+    .wd-list-card-header {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    .wd-see-all-link {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #A2C015;
+    }
+
+    .wd-list-item {
+      padding: 12px;
+      border-top: 1px solid #EBEBEB;
+    }
+
+    .wd-list-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .wd-list-item-heading {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+    }
+
+    .wd-list-item-sub-heading {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: #6C6F5E;
+    }
+
+    .wd-list-item-price {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+    }
+
+    .wd-list-item-attendance {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .wd-attendance-present {
+      color: #21B55C;
+    }
+
+    .wd-attendance-absent {
+      color: #EF3434;
+    }
+
+
+
+
+
+
+
+    .icon-right-divider {
+      position: relative;
+    }
+
+    .icon-right-divider:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(100% + 10px);
+      bottom: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+    }
+
+
+
+
+
+
+
+
+
+    .sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+    }
+
+    .main-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-menu li {
+      position: relative;
+    }
+
+    .main-menu li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sub-menu {
+      display: none;
+      animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: scaleY(0);
+      }
+
+      100% {
+        transform: scaleY(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="form-card"></div>
+      </div>
+
+
+      <div class="col-12">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Add Membership</h4>
+            <button class="primary-btn form-control text-uppercase d-inline-flex w-auto">MEMBERSHIP LIST</button>
+          </div>
+          <div class="wd-list-card-body">
+            <div class="px-5">
+              <div class="row">
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Membership Name <sup>*</sup></label>
+                  <div class="position-relative">
+                    <input type="text" name="" class="form-control custom-input" placeholder="Enter Member Name" />
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Membership Category <sup>*</sup></label>
+                  <div class="position-relative">
+                    <select class="form-select form-control custom-input" aria-label="Default select example">
+                      <option selected>Select category</option>
+                      <option value="1">Gold Membership</option>
+                      <option value="2">Platinum Membership</option>
+                      <option value="3">Silver Membership</option>
+                      <option value="4">Free Membership</option>
+                    </select>
+                  </div>
+                  <div class="text-end mt-1">
+                    <a class="wd-see-all-link flex-auto-0" href="javascript:void()">+ ADD CATEGORY</a>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Membership Period <sup>*</sup></label>
+                  <div class="position-relative">
+                    <input type="text" name="" class="form-control custom-input" placeholder="No. Of Days" />
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Membership Limit <sup>*</sup></label>
+                  <div class="w-100 d-flex position-relative gap-3 gender-radio-option">
+                    <div class="w-100">
+                      <input type="radio" class="btn-check w-100" name="options" id="limitedOption" autocomplete="off">
+                      <label class="btn btn-secondary w-100 d-flex align-items-center justify-content-center"
+                        for="limitedOption">Limited</label>
+                    </div>
+                    <div class="w-100">
+                      <input type="radio" class="btn-check w-100" name="options" id="unlimitedOption"
+                        autocomplete="off">
+                      <label class="btn btn-secondary w-100 d-flex align-items-center justify-content-center"
+                        for="unlimitedOption">Unlimited</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">No. Of Classes <sup>*</sup></label>
+                  <div class="position-relative">
+                    <input type="text" name="" class="form-control custom-input" placeholder="No. Of Classes" />
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Select Class Every</label>
+                  <div class="position-relative">
+                    <select class="form-select form-control custom-input" aria-label="Default select example">
+                      <option selected>Select an option</option>
+                      <option value="1">Week</option>
+                      <option value="2">Month</option>
+                      <option value="3">Year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group icon-input">
+                  <label class="form-label">Membership Amount <sup>*</sup></label>
+                  <div class="position-relative">
+                    <input type="number" name="" class="form-control custom-input" placeholder="" />
+                    <span class="icon-right-divider icon-input-span position-absolute line-height-0">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.692 11.936C10.692 12.908 10.332 13.736 9.612 14.42C8.904 15.092 7.872 15.5 6.516 15.644V17.66H5.04V15.662C4.152 15.602 3.312 15.44 2.52 15.176C1.728 14.912 1.098 14.576 0.63 14.168L1.44 12.35C1.884 12.71 2.424 13.016 3.06 13.268C3.696 13.508 4.356 13.658 5.04 13.718V10.118C4.188 9.914 3.474 9.692 2.898 9.452C2.334 9.2 1.86 8.84 1.476 8.372C1.092 7.892 0.9 7.262 0.9 6.482C0.9 5.51 1.254 4.682 1.962 3.998C2.67 3.314 3.696 2.906 5.04 2.774V0.739999H6.516V2.738C7.188 2.774 7.842 2.888 8.478 3.08C9.126 3.272 9.69 3.524 10.17 3.836L9.432 5.654C8.52 5.126 7.548 4.802 6.516 4.682V8.318C7.38 8.522 8.094 8.744 8.658 8.984C9.234 9.224 9.714 9.584 10.098 10.064C10.494 10.532 10.692 11.156 10.692 11.936ZM3.222 6.374C3.222 6.77 3.378 7.088 3.69 7.328C4.002 7.568 4.452 7.772 5.04 7.94V4.736C4.428 4.832 3.972 5.024 3.672 5.312C3.372 5.6 3.222 5.954 3.222 6.374ZM6.516 13.682C7.152 13.586 7.62 13.4 7.92 13.124C8.232 12.848 8.388 12.506 8.388 12.098C8.388 11.69 8.226 11.366 7.902 11.126C7.578 10.874 7.116 10.664 6.516 10.496V13.682Z"
+                          fill="#B3CE35" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Select Class <sup>*</sup></label>
+                  <div class="position-relative">
+                    <select class="form-select form-control custom-input" aria-label="Default select example">
+                      <option selected>Select an option</option>
+                      <option value="1">Option 01</option>
+                      <option value="2">Option 02</option>
+                      <option value="3">Option 03</option>
+                      <option value="4">Option 04</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group icon-input">
+                  <label class="form-label">Installment Plan </label>
+                  <div class="position-relative">
+                    <input type="number" name="" class="form-control custom-input" placeholder="" />
+                    <span class="icon-right-divider icon-input-span position-absolute line-height-0">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.692 11.936C10.692 12.908 10.332 13.736 9.612 14.42C8.904 15.092 7.872 15.5 6.516 15.644V17.66H5.04V15.662C4.152 15.602 3.312 15.44 2.52 15.176C1.728 14.912 1.098 14.576 0.63 14.168L1.44 12.35C1.884 12.71 2.424 13.016 3.06 13.268C3.696 13.508 4.356 13.658 5.04 13.718V10.118C4.188 9.914 3.474 9.692 2.898 9.452C2.334 9.2 1.86 8.84 1.476 8.372C1.092 7.892 0.9 7.262 0.9 6.482C0.9 5.51 1.254 4.682 1.962 3.998C2.67 3.314 3.696 2.906 5.04 2.774V0.739999H6.516V2.738C7.188 2.774 7.842 2.888 8.478 3.08C9.126 3.272 9.69 3.524 10.17 3.836L9.432 5.654C8.52 5.126 7.548 4.802 6.516 4.682V8.318C7.38 8.522 8.094 8.744 8.658 8.984C9.234 9.224 9.714 9.584 10.098 10.064C10.494 10.532 10.692 11.156 10.692 11.936ZM3.222 6.374C3.222 6.77 3.378 7.088 3.69 7.328C4.002 7.568 4.452 7.772 5.04 7.94V4.736C4.428 4.832 3.972 5.024 3.672 5.312C3.372 5.6 3.222 5.954 3.222 6.374ZM6.516 13.682C7.152 13.586 7.62 13.4 7.92 13.124C8.232 12.848 8.388 12.506 8.388 12.098C8.388 11.69 8.226 11.366 7.902 11.126C7.578 10.874 7.116 10.664 6.516 10.496V13.682Z"
+                          fill="#B3CE35" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="form-label">Select Installment Plan</label>
+                  <div class="position-relative">
+                    <select class="form-select form-control custom-input" aria-label="Default select example">
+                      <option selected>Select Installment Plan</option>
+                      <option value="1">Gold Membership</option>
+                      <option value="2">Platinum Membership</option>
+                      <option value="3">Silver Membership</option>
+                      <option value="4">Free Membership</option>
+                    </select>
+                  </div>
+                  <div class="text-end mt-1">
+                    <a class="wd-see-all-link flex-auto-0" href="javascript:void()">+ ADD Installment Plan</a>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group icon-input">
+                  <label class="form-label">Signup Fee <sup>*</sup></label>
+                  <div class="position-relative">
+                    <input type="number" name="" class="form-control custom-input" placeholder="" />
+                    <span class="icon-right-divider icon-input-span position-absolute line-height-0">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.692 11.936C10.692 12.908 10.332 13.736 9.612 14.42C8.904 15.092 7.872 15.5 6.516 15.644V17.66H5.04V15.662C4.152 15.602 3.312 15.44 2.52 15.176C1.728 14.912 1.098 14.576 0.63 14.168L1.44 12.35C1.884 12.71 2.424 13.016 3.06 13.268C3.696 13.508 4.356 13.658 5.04 13.718V10.118C4.188 9.914 3.474 9.692 2.898 9.452C2.334 9.2 1.86 8.84 1.476 8.372C1.092 7.892 0.9 7.262 0.9 6.482C0.9 5.51 1.254 4.682 1.962 3.998C2.67 3.314 3.696 2.906 5.04 2.774V0.739999H6.516V2.738C7.188 2.774 7.842 2.888 8.478 3.08C9.126 3.272 9.69 3.524 10.17 3.836L9.432 5.654C8.52 5.126 7.548 4.802 6.516 4.682V8.318C7.38 8.522 8.094 8.744 8.658 8.984C9.234 9.224 9.714 9.584 10.098 10.064C10.494 10.532 10.692 11.156 10.692 11.936ZM3.222 6.374C3.222 6.77 3.378 7.088 3.69 7.328C4.002 7.568 4.452 7.772 5.04 7.94V4.736C4.428 4.832 3.972 5.024 3.672 5.312C3.372 5.6 3.222 5.954 3.222 6.374ZM6.516 13.682C7.152 13.586 7.62 13.4 7.92 13.124C8.232 12.848 8.388 12.506 8.388 12.098C8.388 11.69 8.226 11.366 7.902 11.126C7.578 10.874 7.116 10.664 6.516 10.496V13.682Z"
+                          fill="#B3CE35" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6"></div>
+
+                <div class="col-6 form-group icon-input">
+                  <label class="form-label">Membership Image</label>
+                  <div class="upload-btn-wrapper d-block w-100 cursor-pointer">
+                    <button class="btn w-100 cursor-pointer">
+                      <div
+                        class="upload-inner-box-wrap w-100 d-flex align-items-center justify-content-center flex-column">
+                        <img src="./assets/images/icons/upload-icon.png" class="img-fluid" alt="" />
+                        <h6 class="mt-2 fw-500 text-color">Choose File</h6>
+                      </div>
+                    </button>
+                    <input type="file" name="myfile" class="cursor-pointer w-100 h-100" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="row mt-5">
+      <div class="col-3">
+        <div class="stats-counter-card stats-counter-sky-blue d-flex align-items-center gap-3">
+          <div class="icon-class flex-center contain-image flex-auto-0 text-white">
+            <svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.7928 0C13.6302 0 11.0573 2.50994 11.0573 5.59512C11.0573 8.68029 13.6302 11.1902 16.7928 11.1902C19.9554 11.1902 22.5284 8.68029 22.5284 5.59512C22.5284 2.51 19.9554 0 16.7928 0ZM16.7928 9.30505C14.6958 9.30505 12.9898 7.6408 12.9898 5.59512C12.9898 3.5495 14.6958 1.88519 16.7928 1.88519C18.8899 1.88519 20.5959 3.54944 20.5959 5.59512C20.5959 7.6408 18.8899 9.30505 16.7928 9.30505ZM2.45415 9.38967C2.45415 7.08038 4.38003 5.20166 6.74729 5.20166C9.11455 5.20166 11.0404 7.08038 11.0404 9.38967C11.0404 11.699 9.11448 13.5777 6.74729 13.5777C4.38003 13.5777 2.45409 11.699 2.45415 9.38967ZM4.3866 9.38967C4.3866 10.6595 5.44555 11.6925 6.74722 11.6925C8.0489 11.6925 9.10785 10.6595 9.10785 9.38967C9.10785 8.11987 8.0489 7.08685 6.74722 7.08685C5.44555 7.08685 4.3866 8.11987 4.3866 9.38967ZM25.2238 14.1024H28.4522C31.1162 14.1024 33.2835 16.2167 33.2835 18.8154V23.85C33.2835 25.4092 31.9831 26.6778 30.3847 26.6778H3.20077C1.60239 26.6778 0.302002 25.4092 0.302002 23.85V18.8154C0.302002 16.2167 2.46931 14.1024 5.13328 14.1024H8.36172C8.80111 14.1024 9.22652 14.161 9.63138 14.2687C10.43 12.7372 12.0605 11.6849 13.9394 11.6849H19.6461C21.5249 11.6849 23.1555 12.7372 23.9541 14.2687C24.359 14.161 24.7844 14.1024 25.2238 14.1024ZM9.10812 24.7927V16.398C9.10812 16.2933 9.11289 16.1896 9.11985 16.0865C8.87803 16.0224 8.62403 15.9877 8.36172 15.9877H5.13328C3.5349 15.9877 2.23451 17.2562 2.23451 18.8155V23.8501C2.23451 24.3698 2.66797 24.7927 3.20077 24.7927H9.10812ZM11.0406 24.7927H22.5449V16.3979C22.5449 14.8387 21.2445 13.5701 19.6461 13.5701H13.9394C12.341 13.5701 11.0406 14.8387 11.0406 16.3979V24.7927ZM30.3847 24.7927C30.9175 24.7927 31.351 24.3698 31.351 23.8501V18.8154C31.351 17.2562 30.0506 15.9876 28.4522 15.9876H25.2238C24.9615 15.9876 24.7075 16.0224 24.4656 16.0864C24.4726 16.1895 24.4774 16.2932 24.4774 16.3979V24.7927H30.3847ZM22.5447 9.38967C22.5447 7.08038 24.4707 5.20166 26.8379 5.20166C29.2051 5.20166 31.131 7.08038 31.131 9.38967C31.131 11.699 29.2051 13.5777 26.8379 13.5777C24.4707 13.5777 22.5448 11.699 22.5447 9.38967ZM24.4772 9.38967C24.4772 10.6595 25.5362 11.6925 26.8379 11.6925C28.1395 11.6925 29.1985 10.6595 29.1985 9.38967C29.1985 8.11987 28.1395 7.08685 26.8379 7.08685C25.5362 7.08685 24.4773 8.11987 24.4772 9.38967Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="d-flex flex-column gap-1 align-items-start justify-content-start">
+            <h2 class="stats-counter-number">150+</h2>
+            <p class="stats-counter-title m-0">Member</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="stats-counter-card stats-counter-light-orange d-flex align-items-center gap-3">
+          <div class="icon-class flex-center contain-image flex-auto-0 text-white">
+            <svg width="42" height="27" viewBox="0 0 42 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32.4786 14.2007C30.6882 14.2007 29.2368 12.7848 29.2368 11.0383V9.66335C29.2368 7.91681 30.6882 6.50096 32.4786 6.50096C34.269 6.50096 35.7204 7.91681 35.7204 9.66335V11.0383C35.7204 12.7848 34.269 14.2007 32.4786 14.2007Z"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M33.3691 21.7627H40.3718V18.8229C40.3718 16.27 38.2503 14.2005 35.6334 14.2005H24.5859"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M9.11323 14.2007C10.9036 14.2007 12.355 12.7848 12.355 11.0383V9.66335C12.355 7.91681 10.9036 6.50096 9.11323 6.50096C7.32285 6.50096 5.87146 7.91681 5.87146 9.66335V11.0383C5.87146 12.7848 7.32285 14.2007 9.11323 14.2007Z"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M8.38206 21.7627H1.22021V18.8229C1.22021 16.27 3.34171 14.2005 5.95865 14.2005H17.0061"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M20.7959 14.2007C18.0711 14.2007 15.8622 12.0459 15.8622 9.38777V5.81302C15.8622 3.1549 18.0711 1.00011 20.7959 1.00011C23.5207 1.00011 25.7296 3.1549 25.7296 5.81302V9.38777C25.7296 12.0459 23.5207 14.2007 20.7959 14.2007Z"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M25.6874 6.59692H24.9302C23.4446 6.59692 22.011 6.16989 20.7957 5.39408C19.5803 6.16989 18.1468 6.59692 16.6611 6.59692H15.9039"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M17.7717 26H33.2098V21.4418C33.2098 17.4426 29.8865 14.2006 25.787 14.2006H15.805C11.7055 14.2006 8.38208 17.4426 8.38208 21.4418V26H10.6103"
+                stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M25.7869 14.2006L20.7959 26L15.8049 14.2006H25.7869Z" stroke="currentColor" stroke-width="1.6"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M20.7959 16.8398V14.5886" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="d-flex flex-column gap-1 align-items-start justify-content-start">
+            <h2 class="stats-counter-number">20+</h2>
+            <p class="stats-counter-title m-0">Staff Member</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="stats-counter-card stats-counter-simple-pink d-flex align-items-center gap-3">
+          <div class="icon-class flex-center contain-image flex-auto-0 text-white">
+            <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.2486 21.3752V22.1285C22.2486 23.4269 21.7603 24.6705 20.8745 25.6317C20.6508 25.8739 20.3424 25.997 20.034 25.997C19.7619 25.997 19.4898 25.9021 19.2721 25.709C18.8081 25.296 18.7733 24.5916 19.1935 24.134C19.6999 23.5844 19.9811 22.8714 19.9811 22.1271V21.3737C19.9811 19.3548 18.598 17.6062 16.6162 17.1234C16.2761 17.0402 15.9133 17.0847 15.6216 17.2467C12.9248 18.7011 9.64002 18.6937 6.96594 17.2526C6.6621 17.0832 6.30076 17.0387 5.96064 17.1219C3.97738 17.6062 2.59425 19.3533 2.59425 21.3723V22.1255C2.59425 22.8683 2.8739 23.5814 3.38181 24.1326C3.80204 24.5887 3.76728 25.2928 3.3032 25.7058C2.83913 26.1203 2.12419 26.0862 1.70244 25.6286C0.816627 24.6674 0.328369 23.4239 0.328369 22.1255V21.3723C0.328369 18.3267 2.41888 15.6897 5.41343 14.9588C6.30983 14.7404 7.27735 14.8667 8.06793 15.3035C10.0512 16.3731 12.5106 16.3791 14.5181 15.2975C15.2996 14.8652 16.2685 14.7404 17.1634 14.9588C20.158 15.6942 22.2486 18.3312 22.2486 21.3752ZM24.7216 14.9633C24.1139 14.8162 23.4987 15.1802 23.3475 15.7759C23.1964 16.3731 23.5682 16.9778 24.1744 17.1263C26.1561 17.6092 27.5393 19.3577 27.5393 21.3767V22.1299C27.5393 22.8742 27.2596 23.5859 26.7517 24.137C26.3315 24.5931 26.3662 25.2973 26.8303 25.7118C27.048 25.9049 27.3201 26 27.5922 26C27.9006 26 28.2089 25.8767 28.4326 25.6345C29.3185 24.6733 29.8067 23.4299 29.8067 22.1314V21.3782C29.8067 18.3312 27.7161 15.6942 24.7216 14.9633ZM4.10894 7.05674C4.10894 3.16588 7.33023 0 11.2892 0C15.2482 0 18.4695 3.16588 18.4695 7.05674C18.4695 10.9476 15.2482 14.1135 11.2892 14.1135C7.33023 14.1135 4.10894 10.9476 4.10894 7.05674ZM6.37639 7.05674C6.37639 9.71899 8.58035 11.885 11.2892 11.885C13.9981 11.885 16.202 9.71899 16.202 7.05674C16.202 4.39449 13.9981 2.22845 11.2892 2.22845C8.58035 2.22845 6.37639 4.39449 6.37639 7.05674ZM26.0276 7.05674C26.0276 3.50312 23.3264 0.493214 19.7438 0.0549534C19.1255 -0.0178425 18.5556 0.411505 18.4785 1.0221C18.4014 1.63269 18.8413 2.18986 19.4626 2.26563C21.913 2.56573 23.7602 4.62625 23.7602 7.05674C23.7602 8.529 23.089 9.90317 21.9175 10.8273C21.4292 11.212 21.3506 11.9134 21.7422 12.3933C21.9659 12.6681 22.2954 12.8107 22.6265 12.8107C22.8759 12.8107 23.1268 12.7304 23.3354 12.5654C25.0466 11.2165 26.0276 9.20794 26.0276 7.05674Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="d-flex flex-column gap-1 align-items-start justify-content-start">
+            <h2 class="stats-counter-number">10+</h2>
+            <p class="stats-counter-title m-0">Group</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="stats-counter-card stats-counter-low-lavender d-flex align-items-center gap-3">
+          <div class="icon-class flex-center contain-image flex-auto-0 text-white">
+            <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.51819 8.54845C8.51819 8.02388 8.95411 7.59863 9.49184 7.59863H14.6847C15.2224 7.59863 15.6583 8.02388 15.6583 8.54845C15.6583 9.07301 15.2224 9.49826 14.6847 9.49826H9.49184C8.95411 9.49826 8.51819 9.07301 8.51819 8.54845Z"
+                fill="currentColor" />
+              <path
+                d="M8.51819 13.6139C8.51819 13.0893 8.95411 12.6641 9.49184 12.6641H19.8775C20.4152 12.6641 20.8512 13.0893 20.8512 13.6139C20.8512 14.1384 20.4152 14.5637 19.8775 14.5637H9.49184C8.95411 14.5637 8.51819 14.1384 8.51819 13.6139Z"
+                fill="currentColor" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0448 0H17.3248C19.1055 0 20.5016 -1.26059e-05 21.6238 0.089422C22.7664 0.18049 23.7103 0.36901 24.5646 0.793679C25.9693 1.49182 27.1112 2.60581 27.8269 3.97599C28.2622 4.80947 28.4555 5.73029 28.5488 6.84493C28.6405 7.93955 28.6405 9.30149 28.6405 11.0387V12.5809V12.7669C28.6407 14.7281 28.641 15.9245 28.3389 16.9294C27.6236 19.3092 25.7158 21.1704 23.2762 21.8682C22.246 22.1629 21.0196 22.1626 19.0092 22.1624C18.9464 22.1624 18.8829 22.1624 18.8185 22.1624H18.106L18.0278 22.1625C16.902 22.1695 15.8054 22.5124 14.8851 23.145L14.8212 23.1893L11.432 25.5509C9.4788 26.9118 6.91221 24.9465 7.80364 22.7724C7.92345 22.4802 7.70286 22.1624 7.38026 22.1624H6.59906C3.35711 22.1624 0.729004 19.5986 0.729004 16.436V11.0387C0.729004 9.30151 0.728991 7.93956 0.82067 6.84493C0.914025 5.73029 1.10728 4.80947 1.5426 3.97599C2.25827 2.60581 3.40022 1.49182 4.80479 0.793679C5.6592 0.36901 6.60312 0.18049 7.74574 0.089422C8.86785 -1.26059e-05 10.264 0 12.0448 0ZM7.90431 1.98275C6.88212 2.06421 6.22298 2.22078 5.68886 2.48626C4.6507 3.00228 3.80664 3.82567 3.27767 4.83841C3.00553 5.35945 2.84503 6.00245 2.76152 6.99961C2.67707 8.00786 2.67632 9.29235 2.67632 11.0812V16.436C2.67632 18.5495 4.43258 20.2627 6.59906 20.2627H7.38026C9.08052 20.2627 10.2431 21.938 9.61168 23.4779C9.44254 23.8904 9.92952 24.2634 10.3001 24.0051L13.7633 21.5921C15.0084 20.7362 16.4921 20.2724 18.0153 20.2629L18.106 20.2627H18.8185C21.0798 20.2627 22.0018 20.2531 22.7282 20.0453C24.5314 19.5295 25.9415 18.1539 26.4703 16.3948C26.6833 15.6863 26.6932 14.7869 26.6932 12.5809V11.0812C26.6932 9.29235 26.6924 8.00786 26.608 6.99961C26.5244 6.00245 26.3639 5.35945 26.0918 4.83841C25.5628 3.82567 24.7187 3.00228 23.6807 2.48626C23.1465 2.22078 22.4874 2.06421 21.4652 1.98275C20.4317 1.90037 19.1149 1.89963 17.2812 1.89963H12.0883C10.2546 1.89963 8.93786 1.90037 7.90431 1.98275Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="d-flex flex-column gap-1 align-items-start justify-content-start">
+            <h2 class="stats-counter-number">500+</h2>
+            <p class="stats-counter-title m-0">Message</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row mt-5 row-gap-4">
+
+      <div class="col-4">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Payment</h4>
+            <a class="wd-see-all-link flex-auto-0" href="javascript:void()">See all</a>
+          </div>
+          <div class="wd-list-card-body">
+            <ul class="wd-list-container">
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=1" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Jeffrey G. Warren</h5>
+                      <p class="wd-list-item-sub-heading m-0">Platinum Membership</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-price m-0">$10</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=2" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Karen Lemelle</h5>
+                      <p class="wd-list-item-sub-heading m-0">Silver Membership</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-price m-0">$20</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=3" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Allen Soria</h5>
+                      <p class="wd-list-item-sub-heading m-0">Gold Membership</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-price m-0">$70</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=4" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">David Baldwin</h5>
+                      <p class="wd-list-item-sub-heading m-0">Platinum Membership</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-price m-0">$10</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=5" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Melissa Durfee</h5>
+                      <p class="wd-list-item-sub-heading m-0">Silver Membership</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-price m-0">$20</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Staff Attendance</h4>
+            <a class="wd-see-all-link flex-auto-0" href="javascript:void()">See all</a>
+          </div>
+          <div class="wd-list-card-body">
+            <ul class="wd-list-container">
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=6" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Jeffrey Linda Burns</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=7" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Michael Nava</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-absent m-0">Absent</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=8" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Buster Soliza</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=9" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">David Baldwin</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-absent m-0">Absent</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=10" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Melissa Durfee</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Member Attendance</h4>
+            <a class="wd-see-all-link flex-auto-0" href="javascript:void()">See all</a>
+          </div>
+          <div class="wd-list-card-body">
+            <ul class="wd-list-container">
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=11" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Pamela Merchant</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=12" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Hugh Chandler</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-absent m-0">Absent</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=13" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Janie Blaneya</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=14" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Fabian Fralick</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=15" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Carey Lewis</h5>
+                      <p class="wd-list-item-sub-heading m-0">2023-05-22</p>
+                    </div>
+                  </div>
+
+                  <div class="wd-list-content-end">
+                    <p class="wd-list-item-attendance wd-attendance-present m-0">Present</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Membership</h4>
+            <a class="wd-see-all-link flex-auto-0" href="javascript:void()">See all</a>
+          </div>
+          <div class="wd-list-card-body">
+            <ul class="wd-list-container">
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=16" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Gold Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=17" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Platinum Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Unlimited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=18" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Silver Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=19" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Free Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=20" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Gold Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Unlimited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=21" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Platinum Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Unlimited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=22" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Free Membership</h5>
+                      <p class="wd-list-item-sub-heading m-0">Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="wd-list-card">
+          <div class="wd-list-card-head d-flex align-items-center justify-content-between">
+            <h4 class="wd-list-card-header">Group List</h4>
+            <a class="wd-see-all-link flex-auto-0" href="javascript:void()">See all</a>
+          </div>
+          <div class="wd-list-card-body">
+            <ul class="wd-list-container">
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=23" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Gold Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=24" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Platinum Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=25" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Silver Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=26" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Free Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=27" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Gold Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=28" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Platinum Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="wd-list-item">
+                <div class="wd-list-flex-item d-flex align-items-center justify-content-between">
+                  <div class="wd-list-content-start d-flex align-items-center gap-2">
+                    <div class="wd-avatar-window flex-center cover-image flex-auto-0 overflow-hidden">
+                      <img src="https://i.pravatar.cc/50?img=29" alt="user-avatar" />
+                    </div>
+                    <div class="wd-list-item-detail">
+                      <h5 class="wd-list-item-heading">Free Membership</h5>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+    </div>
+
+
+    <div class="container">
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var submenuItems = document.querySelectorAll('.has-submenu');
+
+      submenuItems.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          var submenu = this.querySelector('.sub-menu');
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    });
+
+  </script>
+</body>
+
+</html>
