@@ -16,3 +16,13 @@ $(".count-number").each(function () {
     );
 });
 // Counting number js end
+// ------------------------ CALENDAR JS START ----------------------------
+$(document).ready(function(){
+  $(".fc-button-group button").click(function(){
+    $(".fc-left").removeClass("open-week-time");
+  })
+  $(".fc-agendaWeek-button").click(function(){
+    $(".fc-left").addClass("open-week-time");
+  })
+})
+// ------------------------ CALENDAR JS END ----------------------------
