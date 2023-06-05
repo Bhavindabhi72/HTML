@@ -282,7 +282,15 @@ ul li {
   background-color: var(--secondary-color);
   border-radius: 10px;
 }
-
+.scroll-2 ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.scroll-2 ::-webkit-scrollbar-thumb {
+  background-color: #E0E1E0;
+}
+.scroll-2 ::-webkit-scrollbar-thumb:hover{
+  background-color: var(--accent-color0);
+}
 .img-contain {
   object-fit: contain;
 }
