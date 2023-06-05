@@ -992,6 +992,9 @@ sub {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
+#msform .step-form-btn-wrap.previous:hover svg path{
+  fill: var(--white-color);
+}
 /* ------------------------ CALENDAR CSS START ---------------------------- */
 .calendar-section-wrap {
   border-radius: 15px;
@@ -2514,4 +2517,16 @@ ul.wd-list-container {
 .read-only:read-only::placeholder{
   color: var(--auth-left-col-width);
   font-weight: 600;
+}
+.stroke-width-1 path{
+  stroke-width: 2;
+}
+.dataTables_paginate .page-item.next svg{
+  transform: rotate(180deg);
+}
+.dataTables_paginate .page-item:hover{
+  opacity: 1;
+}
+.dataTables_paginate .page-item:hover svg path{
+  fill: var(--black-color);
 }
