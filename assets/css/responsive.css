@@ -272,7 +272,20 @@
     margin-right: 5px;
   }
 }
-
+@media (min-width: 768px){
+  .add-membership-btn{
+    position: absolute;
+    right: 60px;
+ }
+ div.dataTables_wrapper div.dataTables_filter{
+   transform: translateX(-230px);
+ }
+ div.dataTables_wrapper div.dataTables_filter input{
+   border-color: var(--border-color);
+   min-height: 40px;
+   border-radius: 7px;
+ }
+}
 @media (max-width: 767px) {
   :root {
     --auth-left-col-width: 30%;
