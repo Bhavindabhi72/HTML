@@ -388,7 +388,8 @@ a.primary-btn:hover {
 }
 
 .custom-input,
-.custom-textarea {
+.custom-textarea,
+.form-control-sm {
   border: 1px solid var(--border-color);
   background-color: var(--white-color);
   border-radius: 16px;
@@ -2631,3 +2632,36 @@ table.dataTable thead>tr>th.sorting::before{
   bottom: 18px;
   transform: rotate(180deg);
 }
+div.dataTables_wrapper div.dataTables_filter label{
+  position: relative;
+}
+div.dataTables_wrapper div.dataTables_filter label::after{
+  content: '';
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuNDA0MDQgMC4yMTgyNjJDMi45OTQ5OSAwLjIxODI2MiAwLjIxODAxOCAyLjk5NTIzIDAuMjE4MDE4IDYuNDA0MjlDMC4yMTgwMTggOS44MTMzMiAyLjk5NDk5IDEyLjU5NTcgNi40MDQwNCAxMi41OTU3QzcuODYwMTQgMTIuNTk1NyA5LjE5OTMxIDEyLjA4NTQgMTAuMjU3NyAxMS4yMzgyTDEyLjgzNDQgMTMuODEzNUMxMi45NjQ1IDEzLjkzODIgMTMuMTM4MSAxNC4wMDcgMTMuMzE4MyAxNC4wMDUxQzEzLjQ5ODQgMTQuMDAzMyAxMy42NzA2IDEzLjkzMSAxMy43OTgxIDEzLjgwMzdDMTMuOTI1NSAxMy42NzY0IDEzLjk5ODEgMTMuNTA0MyAxNC4wMDAyIDEzLjMyNDJDMTQuMDAyMyAxMy4xNDQxIDEzLjkzMzcgMTIuOTcwMyAxMy44MDkzIDEyLjg0MDFMMTEuMjMyNSAxMC4yNjM0QzEyLjA4MDUgOS4yMDMzNSAxMi41OTE0IDcuODYyMDggMTIuNTkxNCA2LjQwNDI5QzEyLjU5MTQgMi45OTUyMyA5LjgxMzA4IDAuMjE4MjYyIDYuNDA0MDQgMC4yMTgyNjJaTTYuNDA0MDQgMS41OTMyNUM5LjA2OTk5IDEuNTkzMjUgMTEuMjE1MSAzLjczODM0IDExLjIxNTEgNi40MDQyOUMxMS4yMTUxIDkuMDcwMjQgOS4wNjk5OSAxMS4yMjA3IDYuNDA0MDQgMTEuMjIwN0MzLjczODA4IDExLjIyMDcgMS41OTI5OSA5LjA3MDI0IDEuNTkyOTkgNi40MDQyOUMxLjU5Mjk5IDMuNzM4MzQgMy43MzgwOCAxLjU5MzI1IDYuNDA0MDQgMS41OTMyNVoiIGZpbGw9IiNBMkEzOUUiLz4KPC9zdmc+Cg==);
+  width: 16px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 9;
+  transform: translate(80px, -50%);
+}
+div.dataTables_wrapper div.dataTables_filter label input{
+  padding-left: 40px;
+}
+.dataTables_wrapper .row{
+  align-items: center;
+}
+div.dataTables_wrapper div.dataTables_filter input{
+  position: relative;
+  border-color: var(--border-color);
+  min-height: 40px;
+  border-radius: 7px;
+  max-width: 240px;
+}
+.wd-add-member-btn{
+  height: 0;
+ }
