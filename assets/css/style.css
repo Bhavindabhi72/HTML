@@ -64,6 +64,7 @@
   /* color */
   --body-color: #f4f4f4;
   --primary-color: #b3ce35;
+  --primary-color-rgb: 179, 206, 53;
   --secondary-color: #6772e5;
   --accent-color0: #6c6f5e;
   --white-color: #ffffff;
@@ -147,7 +148,8 @@ a:focus {
   font-weight: lighter;
 }
 
-.hover-txt-blue:hover {
+.hover-txt-blue:hover,
+.hover-txt-blue:hover span {
   color: var(--secondary-color) !important;
 }
 
@@ -274,14 +276,14 @@ ul li {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #E0E1E0;
+  background-color: #e0e1e0;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-color0);
 }
 .scroll-2 ::-webkit-scrollbar-track {
@@ -308,14 +310,18 @@ ul li {
   background-color: var(--secondary-color);
 }
 
-.hover-text {
+.hover-text,
+.hover-text-black,
+.wd-profile-dropdown .dropdown-menu .wd-sidebar-logout-link svg path {
   transition: all 0.3s;
 }
 
 .hover-text:hover {
   color: var(--secondary-color) !important;
 }
-
+.hover-text-black:hover {
+  color: var(--black-color) !important;
+}
 .active-link {
   color: var(--secondary-color);
 }
@@ -392,12 +398,15 @@ a.primary-btn:hover {
   font-weight: 500;
   color: var(--black-color);
   text-align: left;
+  display: flex;
+  align-items: center;
   transition: all 0.3s;
 }
 
 textarea.form-control {
   min-height: 100px;
   padding: 14px 24px;
+  align-items: self-start;
 }
 
 .form-floating > .form-control,
@@ -666,7 +675,9 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.transition-all-03 {
+  transition: all 0.3s;
+}
 /* default css end */
 /* auth css start */
 .auth-section .auth-left-col {
@@ -698,7 +709,7 @@ textarea.form-control {
 .auth-main-row {
   height: calc(100vh - 175px);
 }
-.auth-main-row .heading-title{
+.auth-main-row .heading-title {
   font-size: 30px;
 }
 .icon-input-span {
@@ -706,7 +717,14 @@ textarea.form-control {
   left: 30px;
   transform: translateY(-50%);
 }
-
+.icon-input-span svg {
+  width: 20px;
+  height: 20px;
+  margin-top: -1px;
+}
+.select-icon-span {
+  transform: translateY(85%);
+}
 .icon-input .form-control {
   padding-left: 60px;
 }
@@ -987,12 +1005,12 @@ sub {
 .step-form-btn-wrap {
   margin-top: 100px;
 }
-#msform  .step-form-btn-wrap.previous:hover{
+#msform .step-form-btn-wrap.previous:hover {
   border-color: var(--primary-color);
-    background-color: var(--primary-color);
-    color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
-#msform .step-form-btn-wrap.previous:hover svg path{
+#msform .step-form-btn-wrap.previous:hover svg path {
   fill: var(--white-color);
 }
 /* ------------------------ CALENDAR CSS START ---------------------------- */
@@ -1551,10 +1569,10 @@ img,
 .wd-sidebar-nav-item:hover .wd-sidebar-logout-link .wd-sidebar-nav-link-icon,
 .wd-sidebar-nav-item.active .wd-sidebar-logout-link .wd-sidebar-nav-link-icon,
 .wd-sidebar-nav-item:hover .wd-sidebar-logout-link .wd-sidebar-nav-link-text,
-.wd-sidebar-nav-item.active .wd-sidebar-logout-link .wd-sidebar-nav-link-text {
+.wd-sidebar-nav-item.active .wd-sidebar-logout-link .wd-sidebar-nav-link-text,
+.wd-profile-dropdown .dropdown-menu .wd-sidebar-logout-link:hover svg path {
   color: #ed2c2c;
 }
-
 .wd-sidebar-nav-drop-icon i {
   width: 16px;
   height: 16px;
@@ -2355,7 +2373,7 @@ img,
 
 .icon-right-divider {
   border-right: 1px solid var(--border-color);
-  padding-right: 15px;
+  padding-right: 7px;
 }
 
 .wd-sidebar-content .accordion-item {
@@ -2450,7 +2468,7 @@ img,
 
 .wd-sidebar-content .accordion {
   /* height: calc(100vh - 250px); */
-  height: calc(100vh - (var(--wd-footer-height) + 170px));
+  height: calc(100vh - (var(--wd-footer-height) + 120px));
   overflow-y: overlay;
   padding: 16px 10px 0;
 }
@@ -2511,22 +2529,81 @@ ul.wd-list-container {
   max-height: 390px;
   overflow-y: auto;
 }
-.read-only:read-only{
-  background-color: #EFEFEF;
+.read-only:read-only {
+  background-color: #efefef;
 }
-.read-only:read-only::placeholder{
+.read-only:read-only::placeholder {
   color: var(--auth-left-col-width);
   font-weight: 600;
 }
-.stroke-width-1 path{
+.stroke-width-1 path {
   stroke-width: 2;
 }
-.dataTables_paginate .page-item.next svg{
+.dataTables_paginate .page-item.next svg {
   transform: rotate(180deg);
 }
-.dataTables_paginate .page-item:hover{
+.dataTables_paginate .page-item:hover {
   opacity: 1;
 }
-.dataTables_paginate .page-item:hover svg path{
+.dataTables_paginate .page-item:hover svg path {
   fill: var(--black-color);
+}
+.iti {
+  width: 100%;
+}
+.iti--separate-dial-code .iti__selected-flag {
+  border-radius: 16px 0 0 16px;
+}
+.wd-header-notification-button.dropdown-toggle::after {
+  content: unset;
+}
+.wd-profile-dropdown .notification-dropdown-menu.dropdown-menu {
+  padding: 15px 0;
+}
+.wd-profile-dropdown .notification-dropdown-menu ul {
+  padding: 5px 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.wd-profile-dropdown .notification-dropdown-menu .title {
+  padding: 7px 15px;
+}
+.wd-profile-dropdown .notification-dropdown-menu h4 {
+  font-size: 16px;
+}
+.wd-profile-dropdown .notification-dropdown-menu .head {
+  background-color: #eeefea;
+  padding: 10px 15px;
+}
+.wd-profile-dropdown .notification-dropdown-menu li {
+  padding: 4px;
+  border-bottom: 1px solid #eee;
+}
+.wd-profile-dropdown .notification-dropdown-menu li a {
+  padding: 7px 15px;
+  transition: all 0.5s;
+}
+.wd-profile-dropdown .notification-dropdown-menu li a:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+.wd-profile-dropdown .notification-dropdown-menu .round-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.wd-profile-dropdown .notification-dropdown-menu .round-img img {
+  border-radius: inherit;
+}
+.wd-profile-dropdown .notification-dropdown-menu span {
+  font-size: 12px;
+  color: var(--black-color);
+}
+.wd-profile-dropdown .notification-dropdown-menu ul li h6 {
+  color: var(--text-color);
+  font-size: 12px;
+}
+.see-all-notification-text {
+  color: var(--primary-color);
+  padding: 15px 15px 0;
+  font-size: 14px;
 }

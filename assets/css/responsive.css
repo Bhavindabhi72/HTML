@@ -249,7 +249,12 @@
   .upload-btn-wrapper .btn {
     border-radius: 10px;
   }
-
+  .nice-select.open {
+    border-radius: 10px 10px 0 0;
+  }
+  .iti--separate-dial-code .iti__selected-flag {
+    border-radius: 10px 0 0 10px;
+  }
   .auth-section.sign-up-section .auth-right-col {
     padding: 20px;
   }
@@ -295,7 +300,8 @@
     padding: 20px;
   }
 
-  .heading-title,.auth-main-row .heading-title {
+  .heading-title,
+  .auth-main-row .heading-title {
     font-size: 26px;
   }
 
@@ -454,7 +460,8 @@
     padding: 10px;
   }
 
-  .heading-title,.auth-main-row .heading-title {
+  .heading-title,
+  .auth-main-row .heading-title {
     font-size: 24px;
   }
 
@@ -571,7 +578,8 @@
 }
 
 @media (max-width: 399px) {
-  .heading-title,.auth-main-row .heading-title {
+  .heading-title,
+  .auth-main-row .heading-title {
     font-size: 20px;
   }
   .custom-text-editor .icon {
