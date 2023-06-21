@@ -78,6 +78,10 @@
   --gray-color1: #eeefea;
   --border-color: #d3d3d3;
   --hover-input-color: #1d333805;
+  --pastoral-color: #E8FADA;
+  --extra-life: #75B211;
+  --bloodmyst-isle: #F82929;
+  --pumpkin-orange: #F87A06;
   --gradiant-color0: linear-gradient(90deg, #00d0d0 0%, #17b3b3 100%);
   --gradiant-color1: linear-gradient(90deg, #ff7443 0%, #f8561d 100%);
   --gradiant-color2: linear-gradient(90deg, #f15174 0%, #ef3b62 100%);
@@ -119,7 +123,9 @@
 .fill-white {
   fill: var(--white-color);
 }
-
+.fill-white path,.stroke-white path{
+  color: var(--white-color);
+}
 body {
   font-family: var(--primary-font);
   font-weight: 400;
@@ -654,7 +660,15 @@ textarea.form-control {
 .acent-color {
   color: var(--accent-color0);
 }
-
+.extra-life{
+  color: var(--extra-life);
+}
+.bloodmyst-isle{
+  color: var(--bloodmyst-isle);
+}
+.pumpkin-orange{
+  color: var(--pumpkin-orange);
+}
 .heading-text-color {
   color: var(--black-color);
 }
@@ -678,6 +692,9 @@ textarea.form-control {
 }
 .transition-all-03 {
   transition: all 0.3s;
+}
+.svg-primary-color path{
+  color: var(--primary-color);
 }
 /* default css end */
 /* auth css start */
@@ -2348,8 +2365,11 @@ img,
   width: 95px;
   height: 95px;
   margin: 0 auto;
+  border-radius: 100%;
 }
-
+.wd-modal-delete-assurance-icon-green{
+  background-color: var(--pastoral-color);
+}
 .wd-modal-delete-assurance-title {
   font-size: 21px;
   line-height: 123%;
@@ -2665,3 +2685,34 @@ div.dataTables_wrapper div.dataTables_filter input{
 .wd-add-member-btn{
   height: 0;
  }
+ /* Store Product css start */
+ .small-round-icon-box{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+ }
+ .paid-icon{
+  background-color: var(--extra-life);
+ }
+ .canceled-icon{
+    background-color: var(--bloodmyst-isle);
+ }
+ .pending-icon{
+  background-color: var(--pumpkin-orange);
+ }
+ .small-round-icon-box svg{
+  width: 10px;
+  height: 10px;
+ }
+ .small-round-icon-box.pending-icon svg{
+  width: 14px;
+  height: 14px;
+ }
+ .canceled-icon svg{
+  width: 15px;
+  height: 15px;
+ }
+ .store-product-table-wrap div.dataTables_wrapper div.dataTables_filter{
+  transform: unset;
+ }
+ /* Store Product css end */
