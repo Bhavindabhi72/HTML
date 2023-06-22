@@ -77,6 +77,7 @@
   --gray-color0: #d9d9d9;
   --gray-color1: #eeefea;
   --border-color: #d3d3d3;
+  --border-color0: #EBEBEB;
   --hover-input-color: #1d333805;
   --pastoral-color: #E8FADA;
   --extra-life: #75B211;
@@ -555,7 +556,9 @@ textarea.form-control {
 .w-max-content {
   width: max-content;
 }
-
+.min-w-max-content{
+  min-width: max-content;
+}
 .dropdown-toggle::after {
   vertical-align: unset;
 }
@@ -695,6 +698,9 @@ textarea.form-control {
 }
 .svg-primary-color path{
   color: var(--primary-color);
+}
+table tr{
+  vertical-align: middle;
 }
 /* default css end */
 /* auth css start */
@@ -1056,7 +1062,7 @@ sub {
 
 .calendar-section-wrap .fc-row .fc-content-skeleton td,
 .calendar-section-wrap .fc-row .fc-helper-skeleton td {
-  border-color: #ebebeb;
+  border-color: var(--border-color0);
 }
 
 .calendar-section-wrap .fc-day-grid-container {
@@ -1223,7 +1229,7 @@ sub {
 } */
 
 .calendar-section-wrap .fc-bg td {
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--border-color0);
   border-width: 1px 1px 0;
 }
 
@@ -2011,7 +2017,7 @@ img,
 
 .wd-list-item {
   padding: 12px;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid var(--border-color0);
 }
 
 .wd-list-item:last-child {
@@ -2071,7 +2077,7 @@ img,
 
 /* _START > DATA TABLE STYLES - MEMBERS TYPE < &$@_ */
 .wd-data-table #membershipType {
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid var(--border-color0);
   margin-top: 24px !important;
   padding-top: 24px;
 }
@@ -2716,3 +2722,140 @@ div.dataTables_wrapper div.dataTables_filter input{
   transform: unset;
  }
  /* Store Product css end */
+ /* quantity css start */
+ .qty-input {
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  width: max-content;
+}
+.qty-input .product-qty,
+.qty-input .qty-count {
+  background: transparent;
+  color: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  border: none;
+  display: inline-block;
+  min-width: 0;
+  height: 2.5rem;
+  line-height: 1;
+}
+.qty-input .product-qty:focus,
+.qty-input .qty-count:focus {
+  outline: none;
+}
+.qty-input .product-qty {
+  width: 50px;
+  min-width: 0;
+  display: inline-block;
+  text-align: center;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.qty-input .product-qty::-webkit-outer-spin-button, .qty-input .product-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.qty-input .qty-count {
+  padding: 0;
+  cursor: pointer;
+  width: 2.5rem;
+  font-size: 1.25em;
+  text-indent: -100px;
+  overflow: hidden;
+  position: relative;
+}
+.qty-input .qty-count:before, .qty-input .qty-count:after {
+  content: "";
+  height: 2px;
+  width: 10px;
+  position: absolute;
+  display: block;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.qty-input .qty-count--minus {
+  border-right: 1px solid #e2e2e2;
+}
+.qty-input .qty-count--add {
+  border-left: 1px solid #e2e2e2;
+}
+.qty-input .qty-count--add:after {
+  transform: rotate(90deg);
+}
+.qty-input .qty-count:disabled {
+  color: #ccc;
+  background: #f2f2f2;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+.qty-input .qty-count:disabled:before, .qty-input .qty-count:disabled:after {
+  background: #ccc;
+}
+/* quantity css end */
+/* add-cart css start */
+.add-cart-table-wrap .wd-data-table{
+  max-width: 985px;
+}
+.product-img-box{
+  width: 120px;
+  height: 85px;
+  background-color: #F1F1F1;
+  border-radius: 5px;
+}
+.add-cart-table-wrap .add-cart-select{
+  width: 170px;
+}
+.add-cart-table-wrap .add-cart-select .nice-select{
+  padding: 7px 16px;
+  border-radius: 7px;
+}
+.add-cart-table-wrap .dataTables_info,.add-cart-table-wrap .dataTables_paginate,.add-cart-table-wrap .dataTables_length,.add-cart-table-wrap .dataTables_filter{
+  display: none;
+}
+.add-cart-table-wrap table.dataTable thead>tr>th.sorting::before,
+.add-cart-table-wrap table.dataTable thead>tr>th.sorting::after{
+  display: none;
+}
+.apply-btn{
+  margin-top: 37px;
+}
+.apply-btn input{
+  border-radius: 13px 0 0 13px;
+  width: max-content;
+  min-width: 420px;
+}
+.apply-btn button{
+  border-radius: 0 13px 13px 0;
+}
+.sub-total-wrap .total{
+  border: 1px solid var(--border-color0);
+  border-width: 1px 0;
+}
+.sub-total-wrap li:not(:last-child){
+  margin-bottom: 15px;
+}
+.sub-total-wrap li span{
+  font-size: 20px;
+}
+.checkout-btn{
+  min-width: 380px;
+  margin-top: 37px;
+}
+.add-to-cart-modal .modal-dialog .wd-data-table{
+  max-width: 800px;
+}
+.add-to-cart-modal  .table>:not(caption)>*>*{
+  box-shadow: none;
+}
+/* add-cart css end */
