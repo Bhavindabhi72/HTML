@@ -373,6 +373,10 @@ ul li {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+.acent-btn {
+  background-color: var(--accent-color0);
+  border-color: var(--accent-color0);
+}
 
 a.primary-btn:hover {
   color: var(--white-color) !important;
@@ -659,7 +663,9 @@ textarea.form-control {
 .text-color0 {
   color: var(--text-color0);
 }
-
+.extra-life-color{
+  color: var(--extra-life);
+}
 .acent-color {
   color: var(--accent-color0);
 }
@@ -701,6 +707,13 @@ textarea.form-control {
 }
 table tr{
   vertical-align: middle;
+}
+hr{
+  border-color: var(--border-color0);
+  opacity: 1;
+}
+.border-radius-inherit{
+  border-radius: inherit;
 }
 /* default css end */
 /* auth css start */
@@ -876,11 +889,6 @@ form {
 .membership-plan-col span {
   font-size: 17px;
   margin-bottom: 20px;
-}
-
-.membership-plan-col button {
-  background-color: var(--accent-color0);
-  border-color: var(--accent-color0);
 }
 
 .membership-plan-col:hover button {
@@ -2806,6 +2814,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 /* add-cart css start */
 .add-cart-table-wrap .wd-data-table{
   max-width: 985px;
+  padding: 0 0 50px;
 }
 .product-img-box{
   width: 120px;
@@ -2848,14 +2857,76 @@ div.dataTables_wrapper div.dataTables_filter input{
 .sub-total-wrap li span{
   font-size: 20px;
 }
-.checkout-btn{
+.add-cart-table-wrap .checkout-btn{
   min-width: 380px;
   margin-top: 37px;
 }
-.add-to-cart-modal .modal-dialog .wd-data-table{
+.custom-modal .modal-dialog .wd-data-table{
   max-width: 800px;
 }
-.add-to-cart-modal  .table>:not(caption)>*>*{
+.custom-modal  .table>:not(caption)>*>*{
   box-shadow: none;
 }
+.custom-modal .btn-close{
+  right: 35px;
+}
+.custom-modal .modal-header{
+  padding: 32px 0;
+  border-bottom-color: var(--border-color0);
+}
+.add-to-cart-modal .wd-data-table #membershipType{
+  border-top-color: transparent;
+}
+.add-cart-table-wrap .wd-data-table #membershipType{
+  padding-top: 12px;
+}
 /* add-cart css end */
+/* invoice css start */
+.wd-data-invoice{
+  max-width: 645px;
+  padding: 30px 0 50px;
+}
+.invoice-wrap{
+  margin-top: 30px;
+}
+.invoice-wrap li{
+  border-top: 1px solid var(--border-color0);
+  padding: 20px 0;
+}
+.invoice-wrap li:last-child{
+  border-bottom: 1px solid var(--border-color0);
+}
+.invoice-wrap .product-name{
+  font-size: 19px;
+}
+.invoice-wrap .qty-number{
+  font-size: 16px;
+}
+.invoice-wrap .price-text{
+  font-size: 20px;
+}
+.invoice-wrap .paid-text,
+.order-summary-wrap span{
+  font-size: 15px;
+}
+.invoice-wrap .title,
+.invoice-wrap .name{
+  font-size: 14px;
+}
+.invoice-wrap .label{
+  font-size: 12px;
+}
+.invoice-wrap .user-img{
+  width: 38px;
+  height: 38px;
+  margin-right: 11px;
+  border-radius: 100%;
+  flex: 0 0 1;
+}
+.invoice-wrap p{
+  font-size: 17px;
+}
+.order-summary-wrap .order-summary-title{
+  min-width: 150px;
+}
+/* invoice css end */
