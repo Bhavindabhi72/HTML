@@ -86,6 +86,12 @@
   --pumpkin-orange: #F87A06;
   --maui-mist-color: #EDF2F5;
   --cala-benirrás-blue:#09C5C5;
+
+  --bern-red-0: #E40707;
+  --jet-color: #353535;
+  --galactic-cruise-color: #171583;
+
+  --agate-grey-color: #AFB29F;
   --gradiant-color0: linear-gradient(90deg, #00d0d0 0%, #17b3b3 100%);
   --gradiant-color1: linear-gradient(90deg, #ff7443 0%, #f8561d 100%);
   --gradiant-color2: linear-gradient(90deg, #f15174 0%, #ef3b62 100%);
@@ -3047,6 +3053,7 @@ div.dataTables_wrapper div.dataTables_filter input{
   width: var(--product-details-col-width);
   border: 1px solid var(--border-color1);
   padding: 45px;
+  border-radius: 15px;
 }
 .product-details-col-right h4{
   font-size: 19px;
@@ -3060,5 +3067,69 @@ div.dataTables_wrapper div.dataTables_filter input{
 .product-details-ul li{
   border-bottom: 1px solid var(--border-color1);
   padding: 18px 0;
+}
+.select-size-wrap{
+  min-width: 75px;
+  min-height: 45px;
+  border: 1px solid var(--border-color1);
+  padding: 10px;
+  border-radius: 8px;
+}
+.select-size-wrap span{
+  color: var(--black-color);
+  font-size: 12px;
+}
+.select-size-wrap:hover{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.select-size-wrap:hover span{
+  color: var(--white-color);
+}
+.payment-method-checkmark:checked + .select-size-wrap {
+  background: var(--primary-color);
+}
+.payment-method-checkmark:checked + div span{
+  color: var(--white-color);
+}
+.available-color-label{
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 5px;
+}
+.available-color-size{
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: inherit;
+}
+.available-color-label.white .white-bg{
+  border: 1px solid var(--border-color1);
+}
+.available-color-size:checked + div{
+  border: 1px solid var(--agate-grey-color);
+}
+.available-color-size.red-bg{
+  background-color: var(--bern-red-0);
+}
+.available-color-size.green-bg{
+  background-color: var(--primary-color);
+}
+.available-color-size.jet-bg{
+  background-color: var(--jet-color);
+}
+.available-color-size.black-bg{
+  background-color: var(--black-color);
+}
+.available-color-size.white-bg{
+  background-color: var(--white-color);
+}
+.available-color-size.blue-bg{
+  background-color: var(--galactic-cruise-color);
+}
+.available-color-size-checkmark:checked + .available-color-label{
+  border-color: var(--agate-grey-color);
+}
+.product-details-col-right .product-details-ul li:last-child{
+  border-bottom: 0;
 }
 /* product-details-row css end */
