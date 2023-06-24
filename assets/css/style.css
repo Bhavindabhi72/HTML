@@ -100,6 +100,7 @@
   /* header-less-spacing: */
   --header-less-spacing: 95px;
   --auth-left-col-width: 60%;
+  --product-details-col-width: 575px;
 }
 
 /* :root end */
@@ -3034,3 +3035,30 @@ div.dataTables_wrapper div.dataTables_filter input{
   margin-top: 24px;
 }
 /* wd-data-products css end */
+/* product-details-row css start */
+.product-details-row{
+  grid-gap: 73px;
+  margin-top: 15px;
+}
+.product-details-col-left{
+  width: calc(100% - var(--product-details-col-width));
+}
+.product-details-col-right{
+  width: var(--product-details-col-width);
+  border: 1px solid var(--border-color1);
+  padding: 45px;
+}
+.product-details-col-right h4{
+  font-size: 19px;
+}
+.product-details-col-right h3{
+  font-size: 20px;
+}
+.product-details-col-right  p{
+  font-size: 1;
+}
+.product-details-ul li{
+  border-bottom: 1px solid var(--border-color1);
+  padding: 18px 0;
+}
+/* product-details-row css end */
