@@ -86,6 +86,8 @@
   --pumpkin-orange: #F87A06;
   --maui-mist-color: #EDF2F5;
   --cala-benirrás-blue:#09C5C5;
+  --doctor-color: #F9FAF9;
+  --white-glove: #EFEFED;
 
   --bern-red-0: #E40707;
   --jet-color: #353535;
@@ -740,6 +742,12 @@ hr{
 .custom-searchbar-wrap input{
   padding: 5px 15px 5px 50px;
   border-radius: 7px;
+}
+.h-inherit{
+  height: inherit;
+}
+.min-h-inherit{
+  min-height: inherit;
 }
 /* default css end */
 /* auth css start */
@@ -3132,4 +3140,100 @@ div.dataTables_wrapper div.dataTables_filter input{
 .product-details-col-right .product-details-ul li:last-child{
   border-bottom: 0;
 }
+/* product slider css start */
+.product-details-col-left img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.product-details-col-left .container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.product-details-col-left .mySlides {
+  display: none;
+  background-color: var(--doctor-color);
+  border-radius: 7px;
+  min-height: 500px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.product-details-col-left .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.product-details-col-left .prev,
+.product-details-col-left .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.product-details-col-left .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.product-details-col-left .prev:hover,
+.product-details-col-left .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.product-details-col-left .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.product-details-col-left .caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.product-details-col-left .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.product-details-col-left .slide-preview-grid{
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 23px;
+  margin-top: 30px;
+}
+.product-details-col-left .column {
+  background-color: var(--white-glove);
+  border-radius: 4px;
+}
+/* Add a transparency effect for thumnbail images */
+.product-details-col-left .demo {
+  max-width: 50px;
+  opacity: 0.6;
+}
+
+.product-details-col-left .active,
+.product-details-col-left .demo:hover {
+  opacity: 1;
+}
+/* product slider css end */
 /* product-details-row css end */
