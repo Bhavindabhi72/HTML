@@ -715,6 +715,9 @@ hr{
 .border-radius-inherit{
   border-radius: inherit;
 }
+.left-0{
+  left: 0;
+}
 /* default css end */
 /* auth css start */
 .auth-section .auth-left-col {
@@ -766,7 +769,7 @@ hr{
   padding-left: 60px;
 }
 
-form {
+.auth-form {
   margin-top: 50px;
   max-height: calc(100vh - 300px);
   overflow-y: auto;
@@ -2909,8 +2912,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 .order-summary-wrap span{
   font-size: 15px;
 }
-.invoice-wrap .title,
-.invoice-wrap .name{
+.small-title{
   font-size: 14px;
 }
 .invoice-wrap .label{
@@ -2930,3 +2932,39 @@ div.dataTables_wrapper div.dataTables_filter input{
   min-width: 150px;
 }
 /* invoice css end */
+/* wd-data-checkout css start */
+.wd-data-checkout{
+  padding: 80px 125px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 190px;
+}
+.payment-method-wrap{
+  margin-top: 30px;
+}
+.payment-method-btn{
+  border: 1px solid var(--border-color);
+  padding: 25px 33px;
+  border-radius: 16px;
+}
+.payment-method-btn span{
+  font-size: 15px;
+}
+.payment-method-btn:hover{
+  border-color: var(--primary-color);
+  box-shadow: 0px 4px 17px 0px #D7DAC9A8;
+}
+.payment-method-checkmark:checked + .payment-method-btn{
+  border-color: var(--primary-color);
+  box-shadow: 0px 4px 17px 0px #D7DAC9A8;
+}
+.wd-data-checkout .order-summary-wrap > div.d-flex{
+  padding-bottom: 15px;
+}
+.wd-data-checkout .order-summary-wrap > div.d-flex:last-child{
+  padding: 15px 0 0;
+  border-top: 1px solid var(--border-color0);
+}
+.wd-data-checkout .invoice-wrap li:last-child {
+  border-bottom: 0;
+}
+/* wd-data-checkout css end */
