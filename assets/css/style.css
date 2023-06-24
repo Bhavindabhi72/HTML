@@ -79,6 +79,7 @@
   --border-color: #d3d3d3;
   --border-color0: #EBEBEB;
   --border-color1: #EEEFE8;
+  --border-color2: #E9E9E9;
   --hover-input-color: #1d333805;
   --pastoral-color: #E8FADA;
   --extra-life: #75B211;
@@ -2257,7 +2258,7 @@ img,
   .page-link {
   background: var(--white-color);
   color: var(--black-color);
-  border: 1px solid #e9e9e9;
+  border: 1px solid var(--border-color2);
 }
 
 .wd-data-table
@@ -3051,14 +3052,17 @@ div.dataTables_wrapper div.dataTables_filter input{
 /* wd-data-products css end */
 /* product-details-row css start */
 .product-details-row{
-  grid-gap: 73px;
   margin-top: 15px;
 }
 .product-details-col-left{
   width: calc(100% - var(--product-details-col-width));
+  padding-right: 36.5px;
 }
 .product-details-col-right{
   width: var(--product-details-col-width);
+  padding-left: 36.5px;
+}
+.product-details-col-box{
   border: 1px solid var(--border-color1);
   padding: 45px;
   border-radius: 15px;
@@ -3141,99 +3145,38 @@ div.dataTables_wrapper div.dataTables_filter input{
   border-bottom: 0;
 }
 /* product slider css start */
-.product-details-col-left img {
-  vertical-align: middle;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.product-details-col-left .container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.product-details-col-left .mySlides {
-  display: none;
-  background-color: var(--doctor-color);
-  border-radius: 7px;
+.product-image-gallery-slider-wrap .swiper-wrapper-slider-show{
   min-height: 500px;
+  background-color: var(--doctor-color);
 }
-
-/* Add a pointer when hovering over the thumbnail images */
-.product-details-col-left .cursor {
-  cursor: pointer;
+.product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider{
+  margin-top: 40px;
 }
-
-/* Next & previous buttons */
-.product-details-col-left .prev,
-.product-details-col-left .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.product-details-col-left .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.product-details-col-left .prev:hover,
-.product-details-col-left .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.product-details-col-left .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.product-details-col-left .caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.product-details-col-left .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.product-details-col-left .slide-preview-grid{
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 23px;
-  margin-top: 30px;
-}
-.product-details-col-left .column {
+.product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider .swiper-slide{
   background-color: var(--white-glove);
-  border-radius: 4px;
+  min-height: 80px;
 }
-/* Add a transparency effect for thumnbail images */
-.product-details-col-left .demo {
+.product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider img{
   max-width: 50px;
-  opacity: 0.6;
+  object-fit: contain;
 }
-
-.product-details-col-left .active,
-.product-details-col-left .demo:hover {
-  opacity: 1;
+.product-image-gallery-slider-wrap .swiper-button-next, .product-image-gallery-slider-wrap .swiper-button-prev{
+  width: 30px;
+  height: 30px;
+  background-color: var(--border-color2);
+  border-radius: 8px;
+  border-color: 1px solid transparent;
+}
+.product-image-gallery-slider-wrap .swiper-button-next:after, .product-image-gallery-slider-wrap .swiper-button-prev:after{
+  content: unset;
+}
+.product-image-gallery-slider-wrap .swiper-angle-arrow svg{
+  width: 15px;
+  height: 15px;
+}
+.product-image-gallery-slider-wrap .swiper-angle-arrow:hover{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-color: var(--primary-color);
 }
 /* product slider css end */
 /* product-details-row css end */
