@@ -78,11 +78,14 @@
   --gray-color1: #eeefea;
   --border-color: #d3d3d3;
   --border-color0: #EBEBEB;
+  --border-color1: #EEEFE8;
   --hover-input-color: #1d333805;
   --pastoral-color: #E8FADA;
   --extra-life: #75B211;
   --bloodmyst-isle: #F82929;
   --pumpkin-orange: #F87A06;
+  --maui-mist-color: #EDF2F5;
+  --cala-benirrás-blue:#09C5C5;
   --gradiant-color0: linear-gradient(90deg, #00d0d0 0%, #17b3b3 100%);
   --gradiant-color1: linear-gradient(90deg, #ff7443 0%, #f8561d 100%);
   --gradiant-color2: linear-gradient(90deg, #f15174 0%, #ef3b62 100%);
@@ -717,6 +720,19 @@ hr{
 }
 .left-0{
   left: 0;
+}
+.custom-searchbar-wrap .search-icon{
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.custom-searchbar-wrap .search-icon svg{
+  width: 20px;
+  height: 20px;
+}
+.custom-searchbar-wrap input{
+  padding: 5px 15px 5px 50px;
+  border-radius: 7px;
 }
 /* default css end */
 /* auth css start */
@@ -2968,3 +2984,53 @@ div.dataTables_wrapper div.dataTables_filter input{
   border-bottom: 0;
 }
 /* wd-data-checkout css end */
+/* wd-data-products css start */
+.products-select-search-head-wrap .form-control{
+  border-radius: 7px;
+}
+.products-select-search-head-wrap .nice-select{
+  min-width: 200px;
+}
+.custom-searchbar-wrap{
+  min-width: 325px;
+}
+.products-card-grid{
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 24px;
+  margin-top: 35px;
+}
+.products-card-col{
+  border: 1px solid var(--border-color1);
+  border-radius: 24px;
+  padding: 13px 15px 23px;
+}
+.products-card-col:hover{
+  border-color: var(--primary-color);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.products-card-img{
+  background-color: var(--maui-mist-color);
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  min-height: 215px;
+}
+.product-label{
+  min-width: 80px;
+  min-height: 25px;
+  font-size: 14px;
+  background-color: var(--black-color);
+  border-radius: 12px 0 12px 0;
+}
+.product-label.popular-bg{
+  background-color: var(--cala-benirrás-blue);
+}
+.product-content{
+  padding: 18px 10px;
+}
+.product-content h4{
+  font-size: 15px;
+} 
+.custom-pagination{
+  margin-top: 24px;
+}
+/* wd-data-products css end */
