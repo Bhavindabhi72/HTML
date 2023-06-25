@@ -110,6 +110,7 @@
   --header-less-spacing: 95px;
   --auth-left-col-width: 60%;
   --product-details-col-width: 575px;
+  --product-details-spacing-xy: 36.5px;
 }
 
 /* :root end */
@@ -1760,7 +1761,7 @@ img,
 .wd-header-primary-content {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 15px;
 }
 
 .wd-mobile-sidebar-toggler-button {
@@ -2856,6 +2857,7 @@ div.dataTables_wrapper div.dataTables_filter input{
   height: 85px;
   background-color: #F1F1F1;
   border-radius: 5px;
+  flex: 0 0 auto;
 }
 .add-cart-table-wrap .add-cart-select{
   width: 170px;
@@ -2943,6 +2945,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 .invoice-wrap .paid-text,
 .order-summary-wrap span{
   font-size: 15px;
+  word-wrap: break-word;
 }
 .small-title{
   font-size: 14px;
@@ -2966,9 +2969,9 @@ div.dataTables_wrapper div.dataTables_filter input{
 /* invoice css end */
 /* wd-data-checkout css start */
 .wd-data-checkout{
-  padding: 80px 125px;
+  padding: 60px 100px;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 190px;
+  grid-gap: 130px;
 }
 .payment-method-wrap{
   margin-top: 30px;
@@ -3056,11 +3059,11 @@ div.dataTables_wrapper div.dataTables_filter input{
 }
 .product-details-col-left{
   width: calc(100% - var(--product-details-col-width));
-  padding-right: 36.5px;
+  padding-right: var(--product-details-spacing-xy);
 }
 .product-details-col-right{
   width: var(--product-details-col-width);
-  padding-left: 36.5px;
+  padding-left: var(--product-details-spacing-xy);
 }
 .product-details-col-box{
   border: 1px solid var(--border-color1);

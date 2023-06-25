@@ -543,7 +543,8 @@
             <main class="wd-main">
                <div class="wd-main-content-gutter-space">
                   <div class="wd-list-card">
-                     <div class="wd-data-products pb-3">
+                    
+                     <div class="wd-data-products pb-3 d-none d-md-block">
                         <div class="products-select-search-head-wrap d-flex align-items-center">
                            <select class="form-control custom-input">
                               <option value="1">Select a option</option>
@@ -556,6 +557,18 @@
                               <i data-icon="wdIconSearch" class="position-absolute search-icon"></i>
                            </div>
                         </div>
+                     </div>
+                     <div class="d-md-none pb-5">
+                        <select class="form-control custom-input w-100">
+                           <option value="1">Select a option</option>
+                           <option value="1">All Products</option>
+                           <option value="2">XL-Large</option>
+                           <option value="3">XXL-Large</option>
+                        </select>
+                     </div>
+                     <div class="position-relative custom-searchbar-wrap ms-md-auto mt-3 w-100 d-md-none">
+                        <input type="search" name="" class="form-control custom-input" placeholder="Search by product  or SKU"/>
+                        <i data-icon="wdIconSearch" class="position-absolute search-icon"></i>
                      </div>
                      <hr/>
                      <div class="products-card-grid d-grid">

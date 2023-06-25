@@ -15,24 +15,6 @@ $(".count-number").each(function () {
       }
     );
 });
-// multi slider js start
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper2", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-});
-// multi slider js end
 // quantity css start
 var QtyInput = (function () {
 	var $qtyInputs = $(".qty-input");
@@ -182,3 +164,21 @@ var richTextEditor = {
 
 richTextEditor.init();
 // TEXT EDITOR JS END
+// multi slider js start
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+// multi slider js end
