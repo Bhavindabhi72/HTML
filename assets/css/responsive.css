@@ -126,7 +126,15 @@
   .invoice-wrap p{
     font-size: 14px;
   }
-  
+  .sub-total-wrap li span{
+    font-size: 16px;
+  }
+  .apply-btn input{
+    min-width: 300px;
+  }
+  .add-cart-table-wrap .wd-data-table{
+    padding: 0;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -362,6 +370,19 @@
     padding: 15px;
     border-radius: 10px;
   }
+  .apply-btn button{
+    min-height: 45px;
+  }
+  .add-cart-table-wrap .checkout-btn{
+    min-width: max-content;
+    margin-top: 20px;
+  }
+  .wd-header-title,.wd-account-user-name{
+    font-size: 14px;
+  }
+  .wd-data-table #membershipType{
+    margin-top: 10px !important;
+  }
 }
 @media (min-width: 768px){
   .add-membership-btn{
@@ -571,6 +592,13 @@
   .product-image-gallery-slider-wrap .swiper-slide{
     min-height: 300px;
   }
+  .apply-btn{
+    margin-top: 20px;
+  }
+  .apply-btn input {
+    min-width: 170px;
+  }
+
 }
 
 @media (max-width: 575px) {
