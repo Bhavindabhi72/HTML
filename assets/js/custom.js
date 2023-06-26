@@ -182,9 +182,3 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 // multi slider js end
-// NICE SELECT JS START
-$(document).ready(function () {
-  $("select:not(.ignore)").niceSelect();
-  FastClick.attach(document.body);
-});
- // NICE SELECT JS END
