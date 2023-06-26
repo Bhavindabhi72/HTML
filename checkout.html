@@ -7,20 +7,24 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Checkout | Wodraw_GYM</title>
    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo/mobile-logo.png" />
-   <!-- bootstrap -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-   <!-- nice select -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/nice-select.css" />
-   <!-- calendar -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/fullcalendar.css" />
-   <!-- data table -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css" />
-   <link type="text/css" rel="stylesheet" href="./assets/css/responsive.bootstrap5.min.css" />
-   <!-- font-awesome -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/all.css" />
-   <!-- default -->
-   <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
-   <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- bootstrap -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- slider css -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <!-- nice select -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/nice-select.css" />
+    <!-- country code -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/intlTelInput.css" />
+    <!-- calendar -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/fullcalendar.css" />
+    <!-- data table -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/dataTables.bootstrap5.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/responsive.bootstrap5.min.css" />
+    <!-- font-awesome -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/all.css" />
+    <!-- default -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css" />
 </head>
 
 <body>
@@ -663,6 +667,8 @@
    <script src="./assets/js/popper.min.js"></script>
    <!-- bootstrap -->
    <script src="./assets/js/bootstrap.min.js"></script>
+   <!-- swiper slide -->
+   <script src="./assets/js/swiper-bundle.min.js"></script>
    <!-- nice select -->
    <script src="./assets/js/jquery.nice-select.js"></script>
    <!-- data table -->
@@ -671,38 +677,16 @@
    <script src="./assets/js/dataTables.bootstrap5.min.js"></script>
    <script src="./assets/js/dataTables.responsive.min.js"></script>
    <script src="./assets/js/responsive.bootstrap5.min.js"></script>
+   <!-- country code -->
+   <script src="./assets/js/intlTelInput-jquery.min.js"></script>
    <!-- icon -->
    <script src="./assets/js/wd-icons.js"></script>
    <!-- calendar -->
+   <!-- <script src="./assets/js/jQuery-2.1.4.min.js"></script> -->
    <script src="./assets/js/moment.min.js"></script>
    <script src="./assets/js/fullcalendar.min.js"></script>
    <!-- custom  -->
    <script src="./assets/js/custom.js"></script>
-   <script>
-      $(document).ready(function () {
-         // NICE SELECT JS START
-         $(document).ready(function () {
-            $("select:not(.ignore)").niceSelect();
-            FastClick.attach(document.body);
-         });
-         // NICE SELECT JS END
-         $(document).ready(function () {
-         $('#membershipType').DataTable({
-            "columnDefs": [{
-               "targets": [0],
-               "orderable": false,
-            }],
-            language: {
-               paginate: {
-                  next: '<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.26523e-05 5.7617C2.26607e-05 5.56823 0.0738929 5.37479 0.221322 5.22729L4.86295 0.585707C5.15822 0.290441 5.63694 0.290441 5.93208 0.585707C6.22723 0.880852 6.22723 1.35948 5.93208 1.65477L1.82491 5.7617L5.93194 9.86865C6.22708 10.1639 6.22708 10.6425 5.93194 10.9376C5.63679 11.233 5.15807 11.233 4.86281 10.9376L0.221179 6.29611C0.0737254 6.14854 2.26438e-05 5.95509 2.26523e-05 5.7617Z" fill="#ABABAB"/></svg>',
-                  previous: '<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.26523e-05 5.7617C2.26607e-05 5.56823 0.0738929 5.37479 0.221322 5.22729L4.86295 0.585707C5.15822 0.290441 5.63694 0.290441 5.93208 0.585707C6.22723 0.880852 6.22723 1.35948 5.93208 1.65477L1.82491 5.7617L5.93194 9.86865C6.22708 10.1639 6.22708 10.6425 5.93194 10.9376C5.63679 11.233 5.15807 11.233 4.86281 10.9376L0.221179 6.29611C0.0737254 6.14854 2.26438e-05 5.95509 2.26523e-05 5.7617Z" fill="#ABABAB"/></svg>'
-               }
-            }
-         });
-      });
-      });
-       
-   </script>
 </body>
 
 </html>
