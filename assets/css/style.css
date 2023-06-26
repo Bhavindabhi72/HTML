@@ -2879,7 +2879,7 @@ div.dataTables_wrapper div.dataTables_filter input{
 .apply-btn input{
   border-radius: 13px 0 0 13px;
   width: max-content;
-  min-width: 420px;
+  min-width: 300px;
 }
 .apply-btn button{
   border-radius: 0 13px 13px 0;
@@ -3052,6 +3052,12 @@ div.dataTables_wrapper div.dataTables_filter input{
 } 
 .custom-pagination{
   margin-top: 24px;
+}
+.products-card-col .primary-btn svg path{
+  fill: var(--primary-color);
+}
+.products-card-col .primary-btn:hover svg path{
+  fill: var(--white-color);
 }
 /* wd-data-products css end */
 /* product-details-row css start */
