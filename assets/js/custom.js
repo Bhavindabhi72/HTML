@@ -165,7 +165,7 @@ var richTextEditor = {
 richTextEditor.init();
 // TEXT EDITOR JS END
 // multi slider js start
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".thumbsSliderSwiper", {
   spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
@@ -181,7 +181,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".swiperNavigationSwiper", {
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
