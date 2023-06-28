@@ -170,6 +170,16 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+  },
 });
 var swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,

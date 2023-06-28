@@ -55,7 +55,7 @@
     padding: 25px;
   }
   .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .wd-data-invoice{
     padding: 20px;
@@ -63,6 +63,9 @@
   .wd-data-checkout {
     padding: 30px 50px 0;
     grid-gap: 70px;
+  }
+  .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider img {
+    max-width: 40px;
   }
 }
 
@@ -181,7 +184,9 @@
 }
 
 @media (max-width: 1365px) {
-
+  .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider{
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -680,6 +685,15 @@
   .payment-method-wrap{
     margin-top: 15px;
   }
+  .product-image-gallery-slider-wrap .swiper-button-next, .product-image-gallery-slider-wrap .swiper-button-prev{
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+  }
+  .product-image-gallery-slider-wrap .swiper-angle-arrow svg{
+    width: 13px;
+    height: 13px;
+  }
 }
 @media (min-width: 575px){
   .order-summary-wrap > div{
@@ -799,6 +813,9 @@
 }
 
 @media (max-width: 349px) {
+  .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider img {
+    max-width: 25px;
+  }
 }
 
 /* general use css end */

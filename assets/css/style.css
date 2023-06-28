@@ -3160,22 +3160,34 @@ div.dataTables_wrapper div.dataTables_filter input{
   background-color: var(--doctor-color);
 }
 .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider{
+  max-width: 85%;
   margin-top: 40px;
 }
 .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider .swiper-slide{
   background-color: var(--white-glove);
   min-height: 80px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider .swiper-slide-thumb-active{
+  border-color: var(--primary-color);
 }
 .product-image-gallery-slider-wrap .swiper-wrapper-thumbs-slider img{
   max-width: 50px;
   object-fit: contain;
 }
+.product-image-gallery-slider-wrap .swiper-button-next{
+  right: 0;
+}
+.product-image-gallery-slider-wrap .swiper-button-prev{
+  left: 0;
+}
 .product-image-gallery-slider-wrap .swiper-button-next, .product-image-gallery-slider-wrap .swiper-button-prev{
   width: 30px;
   height: 30px;
-  background-color: var(--border-color2);
+  border: 2px solid var(--border-color2);
   border-radius: 8px;
-  border: 1px solid transparent;
+  transform: translateY(-50%);
 }
 .product-image-gallery-slider-wrap .swiper-button-next:after, .product-image-gallery-slider-wrap .swiper-button-prev:after{
   content: unset;
@@ -3188,8 +3200,8 @@ div.dataTables_wrapper div.dataTables_filter input{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-color: var(--primary-color);
 }
-.product-image-gallery-slider-wrap .swiper-button-prev i{
+/* .product-image-gallery-slider-wrap .swiper-button-prev i{
   transform: rotate(180deg);
-}
+} */
 /* product slider css end */
 /* product-details-row css end */
