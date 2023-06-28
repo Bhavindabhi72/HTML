@@ -344,7 +344,7 @@ ul li {
   color: var(--black-color) !important;
 }
 .active-link {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 /* BUTTON STYLING */
@@ -383,7 +383,8 @@ ul li {
   color: var(--primary-color);
 }
 
-.secondary-btn:hover {
+.secondary-btn:hover,
+.products-card-col:hover .secondary-btn {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
@@ -403,7 +404,8 @@ a.primary-btn:hover {
 }
 
 .primary-btn:hover .left-arrow path,
-.secondary-btn:hover .left-arrow path {
+.secondary-btn:hover .left-arrow path,
+.products-card-col:hover .secondary-btn path {
   fill: var(--white-color);
 }
 
